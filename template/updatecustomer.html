@@ -23,7 +23,17 @@
   <!-- endinject -->
   <link rel="shortcut icon" href="images/favicon.png" />
 </head>
+
+
+
 <body>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+
   <div class="container-scroller"> 
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
@@ -496,102 +506,29 @@
                   </div>
                 </div> -->
 
-                <!-- การค้นหา -->
-                <div  class="form-group col-md-6">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username">
-                    <div class="input-group-append">
-                      <button class="btn btn-sm btn-primary" type="button" style="color: aliceblue;">Search</button>
-                    </div>
-                  </div>
-                </div>
-               
-                <!-- รายการ -->
-                <div class="col-lg-12 grid-margin stretch-card">
+                <!-- ฟอร์มเพิ่มลูกค้า -->
+                <div class="col-12 grid-margin stretch-card">
                   <div class="card">
                     <div class="card-body">
-                      <h4 class="card-title">รายการลูกค้า</h4>
-                      <a  href="addcustomer.html">
-                      <button style="color: aliceblue;" type="button" class="btn btn-primary btn-sm">Add Customer</button>
-                    </a>
-                      <a  href="xxx">
-                      <button  style="color: aliceblue;" type="button" class="btn btn-primary btn-sm">Download</button>
-                      </a>
-                      <div class="table-responsive">
-                        <table class="table table-striped">
-                          <thead>
-                            <tr>
-                              <th>
-                                กระทรวง
-                              </th>
-                              <th>
-                                กรม
-                              </th>
-                              
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>
-                                กระทรวงกลาโหม
-                              </td>
-                              <td>
-                                สำนักงานรัฐมนตรี
-                              </td>
-                              <td>
-                                <div>
-                                 <a href="updatecustomer.html"><button style="color: aliceblue;" type="button" class="btn btn-primary btn-sm">Update</button></a> 
-                                 <a href=" "><button style="color: aliceblue;" type="button" class="btn btn-danger btn-sm">Delete</button> </a> 
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                กระทรวงกลาโหม
-                              </td>
-                              <td>
-                                กรมราชองครักษ์
-                              </td>
-                              <td>
-                                <div>
-                                  <a href="updatecustomer.html"><button style="color: aliceblue;" type="button" class="btn btn-primary btn-sm">Update</button></a> 
-                                  <a href=" "><button style="color: aliceblue;" type="button" class="btn btn-danger btn-sm">Delete</button> </a> 
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                กระทรวงกลาโหม
-                              </td>
-                              <td>
-                                กองทัพบก
-                              </td>
-                              <td>
-                                <div>
-                                  <a href="updatecustomer.html"><button style="color: aliceblue;" type="button" class="btn btn-primary btn-sm">Update</button></a> 
-                                  <a href=" "><button style="color: aliceblue;" type="button" class="btn btn-danger btn-sm">Delete</button> </a> 
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                กระทรวงศึกษาธิการ
-                              </td>
-                              <td>
-                                สำนักงานเลขาธิการสภาการศึกษา
-                              </td>
-                              <td>
-                                <div>
-                                  <a href="updatecustomer.html"><button style="color: aliceblue;" type="button" class="btn btn-primary btn-sm">Update</button></a> 
-                                  <a href=" "><button style="color: aliceblue;" type="button" class="btn btn-danger btn-sm">Delete</button> </a> 
-                                </div>
-                              </td>
-                            </tr>
+                      <h4 class="card-title"> เพิ่มลูกค้า </h4>
  
-                            
-                          </tbody>
-                        </table>
-                      </div>
+                      <form class="forms-sample">
+                        <div class="form-group">
+                          <label for="exampleInputName1">กระทรวง</label>
+                          <input type="text" class="form-control" id="exampleInputName1" placeholder="กระทรวง">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputEmail3">กรม</label>
+                          <input type="email" class="form-control" id="exampleInputEmail3" placeholder="กรม">
+                        </div>
+                        <div>
+                        <button type="submit" class="btn btn-primary me-2">Submit</button>
+                        </div>
+                        <div>
+                        <button onclick="goBack()" class="btn btn-light">Cancel</button>
+                        </div>
+                      </form>
+
                     </div>
                   </div>
                 </div>
