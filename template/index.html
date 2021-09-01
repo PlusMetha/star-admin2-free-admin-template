@@ -94,48 +94,48 @@
         <ul class="nav">
           <li class="nav-item">
             <a class="nav-link" href="index.html">
-              <i  style="color: #cf1b15;" class="mdi mdi-grid-large menu-icon"></i>
-              <span style="color: #cf1b15;" class="menu-title">Dashboard</span>
+              <i    class="mdi mdi-grid-large menu-icon"></i>
+              <span   class="menu-title">Dashboard</span>
             </a>
           </li>
           <li  class="nav-item">
             <a  class="nav-link" href="customer.html">
-              <i  style="color: #cf1b15;"  class="menu-icon mdi mdi-card-text-outline"></i>
-              <span style="color: #cf1b15;" class="menu-title">Customer</span>
+              <i    class="menu-icon mdi mdi-card-text-outline"></i>
+              <span   class="menu-title">Customer</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="project.html">
-              <i  style="color: #cf1b15;"  class="menu-icon mdi mdi-card-text-outline"></i>
-              <span  style="color: #cf1b15;"  class="menu-title">Project</span>
+              <i   class="menu-icon mdi mdi-card-text-outline"></i>
+              <span    class="menu-title">Project</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="alluser.html">
-              <i  style="color: #cf1b15;"  class="menu-icon mdi mdi-face"></i>
-              <span  style="color: #cf1b15;"  class="menu-title">User</span>
+              <i     class="menu-icon mdi mdi-face"></i>
+              <span     class="menu-title">User</span>
             </a>
           </li>
 
 
-          <li   style="color: #cf1b15;"  class="nav-item nav-category">Account</li>
+          <li      class="nav-item nav-category">Account</li>
 
           <li class="nav-item">
             <a class="nav-link" href="account.html">
-              <i  style="color: #cf1b15;"  class="menu-icon mdi mdi-account-box-outline"></i>
-              <span  style="color: #cf1b15;"  class="menu-title">My Profile</span>
+              <i     class="menu-icon mdi mdi-account-box-outline"></i>
+              <span     class="menu-title">My Profile</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="setting.html">
-              <i  style="color: #cf1b15;"  class="menu-icon mdi mdi-settings"></i>
-              <span  style="color: #cf1b15;"  class="menu-title">Setting</span>
+              <i    class="menu-icon mdi mdi-settings"></i>
+              <span     class="menu-title">Setting</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="login.html">
-              <i  style="color: #cf1b15;"  class="menu-icon mdi mdi-logout-variant"></i>
-              <span  style="color: #cf1b15;"  class="menu-title">Logout</span>
+              <i     class="menu-icon mdi mdi-logout-variant"></i>
+              <span     class="menu-title">Logout</span>
             </a>
           </li>
 
@@ -150,11 +150,20 @@
             <div class="col-sm-12">
               <div class="home-tab">
 
+                <div >
+                  <form action="index.html">
+                    <label for="startdate">Start Date</label>
+                    <input type="date" id="startdate" name="startdate">
+                    <label for="enddate">End Date</label>
+                    <input type="date" id="enddate" name="enddate">
+                    <input class=" btn-primary " type="submit">
+                  </form>
+                </div>
  
 
-                <div >
-                  <div  class="dropdown">
-                    <button  style="color: aliceblue;" class="btn btn-danger dropdown-toggle toggle-white btn-lg mb-0 me-0" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> This year </button>
+                <!-- <div >
+                  <div style="padding-top: 1cm;" class="dropdown">
+                    <button  style="color: aliceblue;" class="btn btn-primary dropdown-toggle toggle-white btn-lg mb-0 me-0" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> This year </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
                       <h6 class="dropdown-header">By Year</h6>
                       <a class="dropdown-item" href="#">This Year</a>
@@ -168,7 +177,7 @@
                       <a class="dropdown-item" href="#">Q4</a>
                     </div>
                   </div>
-                </div>
+                </div> -->
 
                 <div class="tab-content tab-content-basic">
                   <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview"> 
@@ -209,7 +218,7 @@
                       </div>
                     </div> 
                     <div class="row">
-                      <div class="col-lg-8 d-flex flex-column">
+                      <div class="col-lg-9 d-flex flex-column">
                         <div class="row flex-grow">
                           <div class="col-12 col-lg-4 col-lg-12 grid-margin stretch-card">
                             <div class="card card-rounded">
@@ -232,7 +241,7 @@
                         </div>
 
                       </div>
-                      <div class="col-lg-4 d-flex flex-column">
+                      <div class="col-lg-3 d-flex flex-column">
                         <div class="row flex-grow">
                           <div class="col-12 grid-margin stretch-card">
                             <div class="card card-rounded">
@@ -244,9 +253,9 @@
                                       <p>100,000,000 ฿</p>
                                       
                                     </div>
-                                    <a href="updatetarget.html"><span  style="color: #cf1b15;" class="badge badge-pill badge-danger float-right">Update Target</span></a>
-                                    <canvas class="my-auto" id="doughnutChart" height="200"></canvas>
-                                    <div id="doughnut-chart-legend" class="mt-5 text-center"></div>
+                                    <a href="updatetarget.html"><span    class="badge badge-pill badge-danger float-right">Update Target</span></a>
+                                    <canvas class="my-auto" id="doughnutChart" height="150"></canvas>
+                                    <div id="doughnut-chart-legend" class="mt-4 text-center"></div>
                                   </div>
                                 </div>
                               </div>
