@@ -46,11 +46,11 @@
         <ul class="navbar-nav">
           <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
             <h1 class="welcome-text">Good Morning, <span class="text-black fw-bold">John Doe</span></h1>
-            <h3 class="welcome-sub-text"> Customer list </h3>
+            <h3 class="welcome-sub-text">Project </h3>
           </li>
         </ul>
         <ul class="navbar-nav ms-auto">
-   
+          
 
           <li class="nav-item dropdown"> 
             <a class="nav-link count-indicator" id="countDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
@@ -119,7 +119,25 @@
     <div class="container-fluid page-body-wrapper">
       <!-- partial:partials/_settings-panel.html -->
 
- 
+      <!-- <div class="theme-setting-wrapper">
+        <div id="settings-trigger"><i class="ti-settings"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close ti-close"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border me-3"></div>Light</div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border me-3"></div>Dark</div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div>
+      </div> -->
+
  
       <!-- partial -->
       <!-- partial:partials/_sidebar.html -->
@@ -179,19 +197,14 @@
 
         </ul>
       </nav>
-         
-
-        </ul>
-      </nav>
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
           <div class="row">
             <div class="col-sm-12">
               <div class="home-tab">
-
-                
  
+                <!-- การค้นหา -->
                 <div class="row">
                   <div  class="form-group col-md-4">
                     <div class=" input-group "> 
@@ -200,7 +213,7 @@
  
                     </div>
                   </div>
-                  <div  class="form-group col-md-5">
+                  <div  class="form-group col-md-1">
  
                    <div class="dropdown">
                      <button style="color: aliceblue;" class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuSizeButton3" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -208,21 +221,30 @@
                      </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton3">
  
-                       <a class="dropdown-item" href="#">กระทรวง</a>
-                       <a class="dropdown-item" href="#">กรม</a>
-                       <a class="dropdown-item" href="#">จำนวนโครงการ</a>
-                       <a class="dropdown-item" href="#">มูลค่าการจ้างงงาน</a>
-      
- 
+                       <a class="dropdown-item" href="#">Name</a>
+                       <a class="dropdown-item" href="#">ยอดขาย</a>
+                       <a class="dropdown-item" href="#">จำนวนโปรเจค</a>
+                       <a class="dropdown-item" href="#">Last Sell</a>
+                       <a class="dropdown-item" href="#">distributor</a>
                     </div>
                   </div> 
  
-                  </div>                 
+                  </div>  
+                  <div  class="form-group col-md-1">
+ 
+  
+                   </div>
+                   <div  class="form-group col-md-3">
+ 
+ 
+  
+                   </div>
+                                 
                   <div  class="form-group col-md-3">
                    <div class=" "> 
  
-                    <a  href="addcustomer.html">
-                       <button style="color: aliceblue;" type="button" class="btn btn-primary btn-sm">Add Customer</button>
+                     <a  href="addproduct.html">
+                       <button style="color: aliceblue;" type="button" class="btn btn-primary btn-sm">Add Product</button>
                       </a>
                       <a  href="xxx">
                        <button  style="color: aliceblue;" type="button" class="btn btn-primary btn-sm">Download</button>
@@ -231,131 +253,186 @@
                    </div>
                  </div>
  
-               
+               </div>
+
+ 
+
                 <!-- รายการ -->
                 <div class="col-lg-12 grid-margin stretch-card">
                   <div class="card">
                     <div class="card-body">
-                      <h4 class="card-title">รายการลูกค้า</h4>
-   
+                      <h4 class="card-title">Product list</h4>
+                      <p class="card-description">
+                        รวมรายการสินค้าที่มีในระบบ
+                      </p>
                       <div class="table-responsive">
                         <table class="table table-striped">
                           <thead>
                             <tr>
                               <th>
-                                กระทรวง
+                                Name
                               </th>
                               <th>
-                                กรม
+                                Distributor
                               </th>
                               <th>
-                                จำนวนโครงการ
-                              </th>    
+                                Sell Value
+                              </th>
                               <th>
-                                มูลค่าการจ้างงงาน
-                              </th>                      
+                                Sell Volume
+                              </th>
+                              <th>
+                                Cost
+                              </th>
+                              <th>
+                                Avg Price
+                              </th>
+                              <th>
+                                Profit
+                              </th>
+                              <th>
+                                Last Update
+                              </th>
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
+                               
                               <td>
-                                กระทรวงกลาโหม
+                                AIS Wifi rounter
                               </td>
                               <td>
-                                สำนักงานรัฐมนตรี
+                                AIS
                               </td>
-                              <td>
-                                1
+                              <td> 
+                                52,000 ฿
                               </td>
-                              <td>
-                                ฿ 50,000
+                              <td> 
+                                522
                               </td>
-                              <td>
-                                <div>
-                                 <a href="updatecustomer.html"><button style="color: aliceblue;" type="button" class="btn btn-primary btn-sm">Update</button></a> 
-                                 <a href=" "><button style="color: aliceblue;" type="button" class="btn btn-danger btn-sm">Delete</button> </a> 
-                                </div>
+                              <td> 
+                               12,000 ฿
                               </td>
+                              <td> 
+                                35,000 ฿
+                              </td>
+                              <td>                                
+                                23,000 &
+                             </td>
+                             <td>                                
+                              <ul  style="list-style-type:none;">
+                               <li>15 May 2017</li>
+                               <li>                      
+                                  <a  href="addproduct.html">
+                                    <button style="color: aliceblue;" type="button" class="btn btn-primary btn-sm">Edit</button>
+                                  </a>
+                               </li>
+                              </ul>
+                            </td>
                             </tr>
                             <tr>
+                               
                               <td>
-                                กระทรวงกลาโหม
+                                AIS Wifi rounter
                               </td>
                               <td>
-                                กรมราชองครักษ์
+                                AIS
                               </td>
-                              <td>
-                                5
+                              <td> 
+                                52,000 ฿
                               </td>
-                              <td>
-                                ฿ 43,000
+                              <td> 
+                                522
                               </td>
-                              <td>
-                                <div>
-                                  <a href="updatecustomer.html"><button style="color: aliceblue;" type="button" class="btn btn-primary btn-sm">Update</button></a> 
-                                  <a href=" "><button style="color: aliceblue;" type="button" class="btn btn-danger btn-sm">Delete</button> </a> 
-                                </div>
+                              <td> 
+                               12,000 ฿
                               </td>
+                              <td> 
+                                35,000 ฿
+                              </td>
+                              <td>                                
+                                23,000 &
+                             </td>
+                             <td>                                
+                              <ul  style="list-style-type:none;">
+                               <li>15 May 2017</li>
+                               <li>                      
+                                  <a  href="addproduct.html">
+                                    <button style="color: aliceblue;" type="button" class="btn btn-primary btn-sm">Edit</button>
+                                  </a>
+                               </li>
+                              </ul>
+                            </td>
                             </tr>
                             <tr>
+                               
                               <td>
-                                กระทรวงกลาโหม
+                                AIS Wifi rounter
                               </td>
                               <td>
-                                กองทัพบก
+                                AIS
                               </td>
-                              <td>
-                                20
+                              <td> 
+                                52,000 ฿
                               </td>
-                              <td>
-                                ฿ 60,000
+                              <td> 
+                                522
                               </td>
-                              <td>
-                                <div>
-                                  <a href="updatecustomer.html"><button style="color: aliceblue;" type="button" class="btn btn-primary btn-sm">Update</button></a> 
-                                  <a href=" "><button style="color: aliceblue;" type="button" class="btn btn-danger btn-sm">Delete</button> </a> 
-                                </div>
+                              <td> 
+                               12,000 ฿
                               </td>
+                              <td> 
+                                35,000 ฿
+                              </td>
+                              <td>                                
+                                23,000 &
+                             </td>
+                             <td>                                
+                              <ul  style="list-style-type:none;">
+                               <li>15 May 2017</li>
+                               <li>                      
+                                  <a  href="addproduct.html">
+                                    <button style="color: aliceblue;" type="button" class="btn btn-primary btn-sm">Edit</button>
+                                  </a>
+                               </li>
+                              </ul>
+                            </td>
                             </tr>
                             <tr>
+                               
                               <td>
-                                กระทรวงศึกษาธิการ
+                                AIS Wifi rounter
                               </td>
                               <td>
-                                สำนักงานเลขาธิการสภาการศึกษา
+                                AIS
                               </td>
-                              <td>
-                                10
+                              <td> 
+                                52,000 ฿
                               </td>
-                              <td>
-                                ฿ 55,000
+                              <td> 
+                                522
                               </td>
-                              <td>
-                                <div>
-                                  <a href="updatecustomer.html"><button style="color: aliceblue;" type="button" class="btn btn-primary btn-sm">Update</button></a> 
-                                  <a href=" "><button style="color: aliceblue;" type="button" class="btn btn-danger btn-sm">Delete</button> </a> 
-                                </div>
+                              <td> 
+                               12,000 ฿
                               </td>
+                              <td> 
+                                35,000 ฿
+                              </td>
+                              <td>                                
+                                23,000 &
+                             </td>
+                             <td>                                
+                              <ul  style="list-style-type:none;">
+                               <li>15 May 2017</li>
+                               <li>                      
+                                  <a  href="addproduct.html">
+                                    <button style="color: aliceblue;" type="button" class="btn btn-primary btn-sm">Edit</button>
+                                  </a>
+                               </li>
+                              </ul>
+                            </td>
                             </tr>
-                            <tr>
-                              <td>
-                                 
-                              </td>
-                              <td>
-                                Summary
-                              </td>
-                              <td>
-                                36
-                              </td>
-                              <td>
-                                ฿ 195,000
-                              </td>
-                              <td>
  
-                              </td>
-                            </tr>
- 
-                            
                           </tbody>
                         </table>
                       </div>
