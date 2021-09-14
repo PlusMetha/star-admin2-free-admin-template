@@ -47,12 +47,99 @@
         <ul class="navbar-nav">
           <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
             <h1 class="welcome-text">Good Morning, <span class="text-black fw-bold">John Doe</span></h1>
-            <h3 class="welcome-sub-text"> </h3>
+            <h3 class="welcome-sub-text">Project </h3>
           </li>
         </ul>
         <ul class="navbar-nav ms-auto">
 
+          <!-- <li class="nav-item dropdown d-none d-lg-block">
+            <a class="nav-link dropdown-bordered dropdown-toggle dropdown-toggle-split" id="messageDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false"> Select Category </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="messageDropdown">
+              <a class="dropdown-item py-3" >
+                <p class="mb-0 font-weight-medium float-left">Select category</p>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-item-content flex-grow py-2">
+                  <p class="preview-subject ellipsis font-weight-medium text-dark">Bootstrap Bundle </p>
+                  <p class="fw-light small-text mb-0">This is a Bundle featuring 16 unique dashboards</p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-item-content flex-grow py-2">
+                  <p class="preview-subject ellipsis font-weight-medium text-dark">Angular Bundle</p>
+                  <p class="fw-light small-text mb-0">Everything you’ll ever need for your Angular projects</p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-item-content flex-grow py-2">
+                  <p class="preview-subject ellipsis font-weight-medium text-dark">VUE Bundle</p>
+                  <p class="fw-light small-text mb-0">Bundle of 6 Premium Vue Admin Dashboard</p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-item-content flex-grow py-2">
+                  <p class="preview-subject ellipsis font-weight-medium text-dark">React Bundle</p>
+                  <p class="fw-light small-text mb-0">Bundle of 8 Premium React Admin Dashboard</p>
+                </div>
+              </a>
+            </div>
+          </li> -->
 
+          <!-- <li class="nav-item d-none d-lg-block">
+            <div id="datepicker-popup" class="input-group date datepicker navbar-date-picker">
+              <span class="input-group-addon input-group-prepend border-right">
+                <span class="icon-calendar input-group-text calendar-icon"></span>
+              </span>
+              <input type="text" class="form-control">
+            </div>
+          </li> -->
+
+          <!-- <li class="nav-item">
+            <form class="search-form" action="#">
+              <i class="icon-search"></i>
+              <input type="search" class="form-control" placeholder="Search Here" title="Search here">
+            </form>
+          </li> -->
+
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link count-indicator" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
+              <i class="icon-mail icon-lg"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="notificationDropdown">
+              <a class="dropdown-item py-3 border-bottom">
+                <p class="mb-0 font-weight-medium float-left">You have 4 new notifications </p>
+                <span class="badge badge-pill badge-primary float-right">View all</span>
+              </a>
+              <a class="dropdown-item preview-item py-3">
+                <div class="preview-thumbnail">
+                  <i class="mdi mdi-alert m-auto text-primary"></i>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject fw-normal text-dark mb-1">Application Error</h6>
+                  <p class="fw-light small-text mb-0"> Just now </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item py-3">
+                <div class="preview-thumbnail">
+                  <i class="mdi mdi-settings m-auto text-primary"></i>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject fw-normal text-dark mb-1">Settings</h6>
+                  <p class="fw-light small-text mb-0"> Private message </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item py-3">
+                <div class="preview-thumbnail">
+                  <i class="mdi mdi-airballoon m-auto text-primary"></i>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject fw-normal text-dark mb-1">New user registration</h6>
+                  <p class="fw-light small-text mb-0"> 2 days ago </p>
+                </div>
+              </a>
+            </div>
+          </li> -->
 
           <li class="nav-item dropdown">
             <a class="nav-link count-indicator" id="countDropdown" href="#" data-bs-toggle="dropdown"
@@ -107,6 +194,9 @@
               </div>
               <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> My
                 Profile <span class="badge badge-pill badge-danger">1</span></a>
+              <!-- <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-message-text-outline text-primary me-2"></i> Messages</a> -->
+              <!-- <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-calendar-check-outline text-primary me-2"></i> Activity</a> -->
+              <!-- <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-help-circle-outline text-primary me-2"></i> FAQ</a> -->
               <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Sign Out</a>
             </div>
           </li>
@@ -122,6 +212,24 @@
     <div class="container-fluid page-body-wrapper">
       <!-- partial:partials/_settings-panel.html -->
 
+      <!-- <div class="theme-setting-wrapper">
+        <div id="settings-trigger"><i class="ti-settings"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close ti-close"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border me-3"></div>Light</div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border me-3"></div>Dark</div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div>
+      </div> -->
 
       <div id="right-sidebar" class="settings-panel">
         <i class="settings-close ti-close"></i>
@@ -290,68 +398,171 @@
             <div class="col-sm-12">
               <div class="home-tab">
 
-                <!-- helpthis -->
-                <a href=" ">
-                  <button style="color: aliceblue; margin-top: 1cm;" type="button" class="btn btn-primary btn-sm">Read
-                    All</button>
-                </a>
-
-
+                <!-- <div class="d-sm-flex align-items-center justify-content-between border-bottom">
+                  <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active ps-0" id="home-tab" data-bs-toggle="tab" href="#overview" role="tab" aria-controls="overview" aria-selected="true">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#audiences" role="tab" aria-selected="false">Audiences</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#demographics" role="tab" aria-selected="false">Demographics</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link border-0" id="more-tab" data-bs-toggle="tab" href="#more" role="tab" aria-selected="false">More</a>
+                    </li>
+                  </ul>
+                  <div>
+                    <div class="btn-wrapper">
+                      <a href="#" class="btn btn-otline-dark align-items-center"><i class="icon-share"></i> Share</a>
+                      <a href="#" class="btn btn-otline-dark"><i class="icon-printer"></i> Print</a>
+                      <a href="#" class="btn btn-primary text-white me-0"><i class="icon-download"></i> Export</a>
+                    </div>
+                  </div>
+                </div> -->
 
 
                 <!-- รายการ -->
-                <div class="col-lg-12 grid-margin stretch-card">
+                <div class="col-12 grid-margin">
                   <div class="card">
                     <div class="card-body">
-                      <h4 class="card-title">การแจ้งเตือน</h4>
-                      <p class="card-description">
-                        ...
-                      </p>
-                      <div class="table-responsive">
-                        <table class="table table-striped">
-                          <thead>
-                            <tr>
+                      <h4 class="card-title"> Project Information</h4>
+                      <form class="form-sample">
+                        <p class="card-description">
+                          project information
+                        </p>
+                        <div class="row">
+                          <div class="col-md-4">
 
-                              <th>
-                                Notification Box
-                              </th>
+                            <p>Customer (กรม) : </p>
 
-
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-
-                              <td>
-                                Herman Beck ได้ทำการเพิ่มข้อมูล %WIN ในโครงการปรับปรุงป้ายไฟ กรมการค้า
-                              </td>
-
-                              </td>
-                            </tr>
-                            <tr>
+                            <p>กระทรวงศึกษาธิการ</p>
 
 
-                              <td>
-                                Herman Beck ได้ทำการเพิ่มข้อมูล %WIN ในโครงการปรับปรุงป้ายไฟ กรมการค้า
-                              </td>
+                          </div>
+                          <div class="col-md-4">
 
-                            </tr>
-                            <tr>
+                            <p>Project:</p>
 
-                              <td>
-                                Herman Beck ได้ทำการเพิ่มข้อมูล %WIN ในโครงการปรับปรุงป้ายไฟ กรมการค้า
-                              </td>
+                            <p>โครงการแก้มลิง</p>
 
-                            </tr>
+                          </div>
+                        </div>
+
+                        <div class="row" style="margin-top: 01em;">
+                          <div class="col-md-4">
+
+                            <p>งบประมาณ:</p>
+
+                            <p>20,000,000</p>
 
 
-                          </tbody>
-                        </table>
-                      </div>
+                          </div>
+                          <div class="col-md-4">
+
+                            <p>งบที่เสนอ:</p>
+
+                            <p>18,000,000</p>
+
+                          </div>
+                        </div>
+
+                        <div class="row" style="margin-top: 01em;">
+                          <div class="col-md-4">
+
+                            <p>Bidding:</p>
+
+                            <p>12 May 2017</p>
+
+
+                          </div>
+                          <div class="col-md-4">
+
+
+
+                          </div>
+                        </div>
+
+                        <div class="row" style="margin-top: 01em;">
+                          <div class="col-md-2">
+
+                            <p>%LG</p>
+                            <p>5%</p>
+
+
+                          </div>
+                          <div class="col-md-2">
+
+
+                            <p>%GP</p>
+                            <p>5%</p>
+
+                          </div>
+                          <div class="col-md-2">
+
+                            <p>%WIN</p>
+                            <p>5%</p>
+
+                          </div>
+                        </div>
+
+                        <div class="row" style="margin-top: 01em;">
+                          <div class="col-md-4">
+
+                            <p>Competitor</p>
+                            <p>AIS</p>
+
+
+                          </div>
+                          <div class="col-md-4">
+
+
+                            <p>Product</p>
+                            <ul>
+                              <li>Coffee</li>
+                              <li>Tea</li>
+                              <li>Milk</li>
+                            </ul>  
+ 
+                          </div>
+
+                        </div>
+
+
+                        <div class="row" style="margin-top: 01em;">
+                          <div class="col-md-6">
+                            <h4 class="card-title">Note</h4>
+                            <p>15 May 2017  ต้องเพิ่มบริการพิเศษ
+                              โดยบริษัทขนส่งและ
+                              ต้องใส่ลังไม้logoกรม </p>
+
+                            <div class="form-group row">
+                              <label class="col-sm-3 col-form-label">เพิ่ม Note</label>
+ 
+ 
+
+                              <div class="col-sm-9">
+                                <input type="text" class="form-control" >
+                              </div>
+                            </div>
+
+
+                          </div>
+ 
+
+                        </div>
+                        
+
+                        <button style="color: aliceblue;" type="button" class="btn btn-primary btn-icon-text">
+                          <i class="ti-file btn-icon-prepend"></i>
+                          Submit
+                        </button>
+
+                      </form>
                     </div>
                   </div>
                 </div>
-
 
               </div>
             </div>

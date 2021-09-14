@@ -84,7 +84,11 @@
 
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->
+
  
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
@@ -147,48 +151,42 @@
           <div class="row">
             <div class="col-sm-12">
               <div class="home-tab">
- 
+               
 
- 
-                <!-- รายการ -->
-                <div class="col-12 grid-margin stretch-card">
-                  <div class="card">
-                    <div class="card-body">
-                      <h4 class="card-title">Add Product</h4>
-                      <p class="card-description">
-                        Fill Product Information
-                      </p>
-                      <form class="forms-sample">
-                        <div class="form-group">
-                          <label for="exampleInputName1">Name</label>
-                          <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputEmail3">Distributor</label>
-                          <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword4">Band</label>
-                          <input type="password" class="form-control" id="exampleInputPassword4" placeholder="Password">
-                        </div>
-      
- 
-                        <div class="form-group">
-                          <label for="exampleInputCity1">Category</label>
-                          <input type="text" class="form-control" id="exampleInputCity1" placeholder="Location">
-                        </div>
- 
- 
-                        <div href="Product.html">
-                        <button style="color: aliceblue;" type="submit" class="btn btn-primary me-2">Submit</button>
-                        </div>
-                        <div href="product.html">
-                        <button class="btn btn-light">Cancel</button>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
+                <form action="/action_page.php">
+                  <textarea name="message" rows="10" style="width: 95%;">นี่จะต้องเปลี่ยนเมื่อคนเข้ามาพิมพ์ และไปแสดงที่หน้าก่อน</textarea>
+                  <br><br>
+                  <input style="color: aliceblue;" class="btn btn-primary btn-sm" type="submit">
+                </form>
+
+
+
+                <!-- Tiny -->
+                <!-- <script src="https://cdn.tiny.cloud/1/i0pr35iwovd8bse70x2oiv8uphkvxjqqt9s0njq4vzl3itcw/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+              
+                <!DOCTYPE html>
+                <html>
+                <head>
+                  <script src='https://cdn.tiny.cloud/1/i0pr35iwovd8bse70x2oiv8uphkvxjqqt9s0njq4vzl3itcw/tinymce/5/tinymce.min.js' referrerpolicy="origin">
+                  </script>
+                  <script>
+                    tinymce.init({
+                      selector: '#mytextarea'
+                    });
+                  </script>
+                </head>
+                
+                <body>
+                  <h1>TinyMCE Quick Start Guide</h1>
+                  <form method="post">
+                    <textarea id="mytextarea" name="mytextarea">
+                      Hello, World!
+                    </textarea>
+                  </form>
+                </body>
+                </html> -->
+                <!-- Tiny -->
+
 
               </div>
             </div>
