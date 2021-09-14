@@ -1,3 +1,4 @@
+ 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +14,7 @@
   <link rel="stylesheet" href="vendors/typicons/typicons.css">
   <link rel="stylesheet" href="vendors/simple-line-icons/css/simple-line-icons.css">
   <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="css/background.css">
   <!-- endinject -->
   <!-- Plugin css for this page -->
   <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
@@ -23,29 +25,30 @@
   <!-- endinject -->
   <link rel="shortcut icon" href="images/favicon.png" />
 
-  <style>
-    div.statistics-title {
-      background-color: lightgrey;
-      padding: 20px;
-    }
+   <style>
 
-    @media screen and (min-width: 601px) {
-      div.statistics-title {
-        font-size: 80px;
-        background-color: aqua;
-      }
-    }
+div.statistics-title {
+  background-color: lightgrey;
+  padding: 20px;
+}
 
-    @media screen and (max-width: 600px) {
-      div.statistics-title {
-        font-size: 0.5rem;
+@media screen and (min-width: 601px) {
+  div.statistics-title {
+    font-size: 80px;
+    background-color: aqua;
+  }
+}
 
-      }
-    }
-  </style>
+@media screen and (max-width: 600px) {
+  div.statistics-title {
+    font-size: 0.5rem;
+ 
+  }
+}
+
+   </style>
 
 </head>
-
 <body>
   <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
@@ -83,7 +86,7 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0"
               aria-labelledby="countDropdown">
-              <a href="notification.html"  class="dropdown-item py-3">
+              <a href="sale_notification.html"  class="dropdown-item py-3">
                 <p class="mb-0 font-weight-medium float-left">You have 7 unread mails </p>
                  <span class="badge badge-pill badge-primary float-right">View all</span> 
               </a>
@@ -104,8 +107,6 @@
 
       </div>
     </nav>
-
-
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
  
@@ -225,7 +226,7 @@
                               <thead>
                                 <tr>
                                   <th>Total Order</th>
-                                  <th>Total Value</th>
+                                  <th>Total Value Win</th>
                                   <th>Forecast Value</th>
                                   <th>All WIN</th>
                                   <th>All Lost</th>
@@ -286,11 +287,13 @@
                               <div class="d-sm-flex justify-content-between align-items-start">
                                 <div>
                                   <h4 class="card-title card-title-dash">Market Overview</h4>
-                                  <p class="card-subtitle card-subtitle-dash">Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit</p>
+                                  <p class="card-subtitle card-subtitle-dash"> </p>
                                 </div>
 
                               </div>
+
+ 
+
 
                               <div class="d-sm-flex align-items-center mt-1 justify-content-between">
 
@@ -299,10 +302,95 @@
                                 </div>
                               </div>
 
+                              <div>
+                                <table class="charts-css column">
+                                  <table id="q-graph">
+                                    <caption> </caption>
+                                    <!-- <thead>
+                                    <tr>
+                                    <th></th>
+                                    <th class="sent">Invoiced</th>
+                                    <th class="paid">Collected</th>
+                                    </tr>
+                                    </thead> -->
+                                    <tbody>
+                                    <tr class="qtr" id="q1">
+                                    <th scope="row"  >JAN</th>
+                                    <td class="sent bar" style="height: 10%;"><p> </p></td>
+                                    <td class="paid bar" style="height: 15%;"><p> </p></td>
+                                    </tr>
+                                    <tr class="qtr" id="q2">
+                                    <th scope="row">FEB</th>
+                                    <td class="sent bar" style="height: 16%;"><p> </p></td>
+                                    <td class="paid bar" style="height: 18%;"><p> </p></td>
+                                    </tr>
+                                    <tr class="qtr" id="q3">
+                                    <th scope="row">MAR</th>
+                                    <td class="sent bar" style="height: 21%;"><p> </p></td>
+                                    <td class="paid bar" style="height: 22%;"><p> </p></td>
+                                    </tr>
+                                    <tr class="qtr" id="q4">
+                                    <th scope="row">APR</th>
+                                    <td class="sent bar" style="height: 26%;"><p> </p></td>
+                                    <td class="paid bar" style="height: 31%;"><p> </p></td>
+                                    </tr>
+                                    <tr class="qtr" id="q5">
+                                      <th scope="row">MAY</th>
+                                      <td class="sent bar" style="height: 34%;"><p> </p></td>
+                                      <td class="paid bar" style="height: 33%;"><p> </p></td>
+                                      </tr>
+                                      <tr class="qtr" id="q6">
+                                        <th scope="row">JUN</th>
+                                        <td class="sent bar" style="height: 46%;"><p> </p></td>
+                                        <td class="paid bar" style="height: 39%;"><p> </p></td>
+                                        </tr>
+                                        <tr class="qtr" id="q7">
+                                          <th scope="row">JUL</th>
+                                          <td class="sent bar" style="height: 58%;"><p> </p></td>
+                                          <td class="paid bar" style="height: 45%;"><p> </p></td>
+                                          </tr>
+                                          <tr class="qtr" id="q8">
+                                            <th scope="row">AUG</th>
+                                            <td class="sent bar" style="height: 68%;"><p> </p></td>
+                                            <td class="paid bar" style="height: 58%;"><p> </p></td>
+                                            </tr>
+                                            <tr class="qtr" id="q9">
+                                              <th scope="row">SEP</th>
+                                              <td class="sent bar" style="height: 76%;"><p> </p></td>
+                                              <td class="paid bar" style="height: 69%;"><p> </p></td>
+                                              </tr>
+                                              <tr class="qtr" id="q10">
+                                                <th scope="row">OCT</th>
+                                                <td class="sent bar" style="height: 83%;"><p> </p></td>
+                                                <td class="paid bar" style="height: 89%;"><p> </p></td>
+                                                </tr>
+                                                <tr class="qtr" id="q11">
+                                                  <th scope="row">NOV</th>
+                                                  <td class="sent bar" style="height: 92%;"><p> </p></td>
+                                                  <td class="paid bar" style="height: 95%;"><p> </p></td>
+                                                  </tr>
+                                                  <tr class="qtr" id="q12">
+                                                    <th scope="row">DEC</th>
+                                                    <td class="sent bar" style="height: 95%;"><p> </p></td>
+                                                    <td class="paid bar" style="height: 98%;"><p> </p></td>
+                                                    </tr>
 
-                              <div class="chartjs-bar-wrapper mt-3">
-                                <canvas id="marketingOverview"></canvas>
+                                    </tbody>
+                                    </table>
+                                    
+                                    <div  id="ticks">
+                                    <div class="tick" style="height: 59px;" ><p> </p> </div>
+                                    <div class="tick" style="height: 59px;"><hr style="height:2px;border-width:1;color:gold;background-color:gold; "><p>40,000K฿</p></div>
+                                    <div class="tick" style="height: 59px;"><p>30,000K฿</p></div>
+                                    <div class="tick" style="height: 59px;"><p>20,000K฿</p></div>
+                                    <div class="tick" style="height: 59px;"><p>10,000K฿</p></div>
+                                    </div>
+                                </table>
                               </div>
+
+                              <!-- <div class="chartjs-bar-wrapper mt-3">
+                                <canvas id="marketingOverview"></canvas>
+                              </div> -->
                             </div>
                           </div>
                         </div>
@@ -782,6 +870,10 @@
                       </div>
                     </div>
                   </div>
+
+
+
+
 
                 </div>
               </div>
