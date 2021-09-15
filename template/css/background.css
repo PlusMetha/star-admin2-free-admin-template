@@ -100,12 +100,12 @@ font-weight: normal; color: #333;}
 }
 #q-graph .sent {
   left: 70px;  /* ระยะห่างระหว่างแท่ง  */
-  background-color: #F95F53;
+  background-color: #E91E63;
   border-color: transparent;
 }
 #q-graph .paid {
   left: 60px; /* ระยะห่างระหว่างแท่ง  */
-  background-color: #52CDFF;
+  background-color: #1F3BB3;
   border-color: transparent;
 }
 

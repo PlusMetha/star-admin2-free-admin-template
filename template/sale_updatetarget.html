@@ -23,8 +23,11 @@
   <!-- endinject -->
   <link rel="shortcut icon" href="images/favicon.png" />
 </head>
+
+
+
 <body>
-  <div class="container-scroller"> 
+  <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
@@ -53,16 +56,16 @@
 
         <ul class="navbar-nav ms-auto">
           <li class="nav-item dropdown">
-            <a class="nav-link count-indicator" id="countDropdown"  data-bs-toggle="dropdown"
+            <a class="nav-link count-indicator" id="countDropdown" href="notification.html" data-bs-toggle="dropdown"
               aria-expanded="false">
               <i class="icon-bell"></i>
               <span class="count"></span>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0"
               aria-labelledby="countDropdown">
-              <a href="notification.html"  class="dropdown-item py-3">
+              <a class="dropdown-item py-3">
                 <p class="mb-0 font-weight-medium float-left">You have 7 unread mails </p>
-                 <span class="badge badge-pill badge-primary float-right">View all</span> 
+                <span class="badge badge-pill badge-primary float-right">View all</span>
               </a>
               <div class="dropdown-divider"></div>
 
@@ -84,66 +87,61 @@
 
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
-      <!-- partial:partials/_settings-panel.html -->
-
- 
-      <!-- partial -->
-      <!-- partial:partials/_sidebar.html -->
-      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+      <nav  class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
-              <i class="mdi mdi-grid-large menu-icon"></i>
-              <span class="menu-title">Dashboard</span>
+            <a class="nav-link" href="sale_index.html">
+              <i    class="mdi mdi-grid-large menu-icon"></i>
+              <span   class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li  class="nav-item">
+            <a  class="nav-link" href="sale_customer.html">
+              <i    class="menu-icon mdi mdi-account-multiple-outline"></i>
+              <span   class="menu-title">Customer</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="customer.html">
-              <i class="menu-icon mdi mdi-account-multiple-outline"></i>
-              <span class="menu-title">Customer</span>
+            <a class="nav-link" href="sale_project.html">
+              <i   class="menu-icon mdi mdi-card-text-outline"></i>
+              <span    class="menu-title">Project</span>
             </a>
           </li>
+ 
           <li class="nav-item">
-            <a class="nav-link" href="project.html">
-              <i class="menu-icon mdi mdi-card-text-outline"></i>
-              <span class="menu-title">Project</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="alluser.html">
-              <i class="menu-icon mdi mdi-face"></i>
-              <span class="menu-title">User</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="product.html">
-              <i class="menu-icon mdi mdi-briefcase"></i>
-              <span class="menu-title">Product</span>
+            <a class="nav-link" href="sale_product.html">
+              <i     class="menu-icon mdi mdi-briefcase"></i>
+              <span     class="menu-title">Product</span>
             </a>
           </li>
 
-          <li class="nav-item nav-category">Account</li>
+          <li      class="nav-item nav-category">Account</li>
 
           <li class="nav-item">
-            <a class="nav-link" href="account.html">
-              <i class="menu-icon mdi mdi-account-box-outline"></i>
-              <span class="menu-title">My Profile</span>
+            <a class="nav-link" href="sale_account.html">
+              <i     class="menu-icon mdi mdi-account-box-outline"></i>
+              <span     class="menu-title">My Profile</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="setting.html">
-              <i class="menu-icon mdi mdi-settings"></i>
-              <span class="menu-title">Setting</span>
+            <a class="nav-link" href="sale_setting.html">
+              <i    class="menu-icon mdi mdi-settings"></i>
+              <span     class="menu-title">Setting</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="login.html">
-              <i class="menu-icon mdi mdi-logout-variant"></i>
-              <span class="menu-title">Logout</span>
+              <i     class="menu-icon mdi mdi-logout-variant"></i>
+              <span     class="menu-title">Logout</span>
             </a>
           </li>
 
         </ul>
+      </nav>
+
+
+
+      </ul>
       </nav>
       <!-- partial -->
       <div class="main-panel">
@@ -152,49 +150,37 @@
             <div class="col-sm-12">
               <div class="home-tab">
 
-
-
-                <!-- การค้นหา -->
-
-                <div class="col-md-12 grid-margin stretch-card">
+ 
+                <!-- ฟอร์มเพิ่มลูกค้า -->
+                <div class="col-12 grid-margin stretch-card">
                   <div class="card">
                     <div class="card-body">
-                      <h4 class="card-title">Default form</h4>
-                      <p class="card-description">
-                        Basic form layout
-                      </p>
+                      <h4 class="card-title"> เพิ่มลูกค้า </h4>
+ 
                       <form class="forms-sample">
                         <div class="form-group">
-                          <label for="exampleInputUsername1">Name-Surname</label>
-                          <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Username">
+                          <label for="exampleInputName1">มูลค่า</label>
+
+                          <input type="text" class="form-control" id="exampleInputName1" placeholder="บาท">
                         </div>
                         <div class="form-group">
-                          <label for="exampleInputEmail1">Email address</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                          <label for="start">Start Year:</label>
+                          <input type="year" id="start" name="start"
+                          min="2018" value="2018">
                         </div>
-                        <div class="form-group">
-                          <label for="exampleInputConfirmPassword1">Telephone</label>
-                          <input type="telephone" class="form-control" id="exampleInputConfirmPassword1" placeholder="Telephone">
+                        <div>
+                        <button style="color: aliceblue;" type="submit" class="btn btn-primary me-2">Submit</button>
                         </div>
- 
-                           
-                            <h4 class="card-title">Change Profile Picture</h4>
-                            <input type="file" class="dropify" data-max-file-size="50kb" />
-                           
- 
-                          <form action="/action_page.php" >
-                            <h4 style="margin-top: 1cm;" class="card-title">Private Note</h4>
-                            <textarea name="message" rows="10" style="width: 95%;">นี่จะต้องเปลี่ยนเมื่อคนเข้ามาพิมพ์ และไปแสดงที่หน้าก่อน</textarea>
-                            <br><br>
-                          </form>
-                          <a href="account.html"><button style="color: aliceblue;" type="submit" class="btn btn-primary me-2">Submit</button></a>
-                         
-                          <a href="account.html"><button class="btn btn-light">Cancel</button></a>
+                        <div>
+                          <a  href="sale_index.html">
+                            <button  type="button" class="btn btn-light">Cancle</button>
+                          </a>
+                        </div>
                       </form>
+
                     </div>
                   </div>
                 </div>
-   <!-- รายการ -->
 
               </div>
             </div>
