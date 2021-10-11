@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+  <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>DevExtreme Demo</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>window.jQuery || document.write(decodeURIComponent('%3Cscript src="js/jquery.min.js"%3E%3C/script%3E'))</script>
+    <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/21.1.6/css/dx.common.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/21.1.6/css/dx.light.css" />
+    <script src="https://cdn3.devexpress.com/jslib/21.1.6/js/dx.all.js"></script>
+ 
+</head>
+  
+  <script>
+$(function(){
+    var dataGrid = $("#gridContainer").dxDataGrid({
+        dataSource: employees,
+        keyExpr: "ID",
+        showBorders: true,
+        sorting: {
+            mode: "multiple"
+        },
+        columns: [ 
+            { 
+                dataField: "Prefix",
+                caption: "Title",
+                width: 70
+            }, {
+                dataField: "FirstName",
+                sortOrder: "asc"
+            }, {
+                dataField: "LastName",
+                sortOrder: "asc"
+            }, "City",
+            "State", {
+                dataField: "Position",
+                width: 130
+            }, {
+                dataField: "HireDate",
+                dataType: "date"
+            }
+        ]
+    }).dxDataGrid("instance");
+    
+    
+    $("#positionSorting").dxCheckBox({
+        value: false,
+        text: "Disable Sorting for the Position Column",
+        onValueChanged: function(data) {
+            dataGrid.columnOption(5, "sortOrder", undefined);
+            dataGrid.columnOption(5, "allowSorting", !data.value);
+        }
+    });
+});
+
+var employees = [{
+    "ID" : 1,
+    "FirstName" : "Patchara",
+    "LastName" : "Heart",
+    "Phone" : "(213) 555-9392",
+    "Prefix" : "Mr.",
+    "Position" : "CEO",
+    "BirthDate" : "1964-03-16",
+    "HireDate" : "1995-01-15",
+    "Email" : "jheart@dx-email.com",
+    "Address" : "351 S Hill St.",
+    "City" : "Los Angeles",
+    "StateID" : 5,
+    "State" : "California",
+    "HomePhone" : "(213) 555-9208",
+    "Skype" : "jheartDXskype"
+}, {
+    "ID" : 2,
+    "FirstName" : "Olivia",
+    "LastName" : "Peyton",
+    "Phone" : "(310) 555-2728",
+    "Prefix" : "Mrs.",
+    "Position" : "Sales Assistant",
+    "BirthDate" : "1981-06-03",
+    "HireDate" : "2012-05-14",
+    "Email" : "oliviap@dx-email.com",
+    "Address" : "807 W Paseo Del Mar",
+    "City" : "Los Angeles",
+    "StateID" : 5,
+    "State" : "California",
+    "HomePhone" : "(310) 555-4547",
+    "Skype" : "oliviapDXskype"
+}, {
+    "ID" : 3,
+    "FirstName" : "Robert",
+    "LastName" : "Reagan",
+    "Phone" : "(818) 555-2387",
+    "Prefix" : "Mr.",
+    "Position" : "CMO",
+    "BirthDate" : "1974-09-07",
+    "HireDate" : "2002-11-08",
+    "Email" : "robertr@dx-email.com",
+    "Address" : "4 Westmoreland Pl.",
+    "City" : "Bentonville",
+    "StateID" : 4,
+    "State" : "Arkansas",
+    "HomePhone" : "(818) 555-2438",
+    "Skype" : "robertrDXskype"
+}, {
+    "ID" : 4,
+    "FirstName" : "Greta",
+    "LastName" : "Sims",
+    "Phone" : "(818) 555-6546",
+    "Prefix" : "Ms.",
+    "Position" : "HR Manager",
+    "BirthDate" : "1977-11-22",
+    "HireDate" : "1998-04-23",
+    "Email" : "gretas@dx-email.com",
+    "Address" : "1700 S Grandview Dr.",
+    "City" : "Atlanta",
+    "StateID" : 11,
+    "State" : "Georgia",
+    "HomePhone" : "(818) 555-0976",
+    "Skype" : "gretasDXskype"
+}, {
+    "ID" : 5,
+    "FirstName" : "Brett",
+    "LastName" : "Wade",
+    "Phone" : "(626) 555-0358",
+    "Prefix" : "Mr.",
+    "Position" : "IT Manager",
+    "BirthDate" : "1968-12-01",
+    "HireDate" : "2009-03-06",
+    "Email" : "brettw@dx-email.com",
+    "Address" : "1120 Old Mill Rd.",
+    "City" : "Boise",
+    "StateID" : 13,
+    "State" : "Idaho",
+    "HomePhone" : "(626) 555-5985",
+    "Skype" : "brettwDXskype"
+}, {
+    "ID" : 6,
+    "FirstName" : "Sandra",
+    "LastName" : "Johnson",
+    "Phone" : "(562) 555-2082",
+    "Prefix" : "Mrs.",
+    "Position" : "Controller",
+    "BirthDate" : "1974-11-15",
+    "HireDate" : "2005-05-11",
+    "Email" : "sandraj@dx-email.com",
+    "Address" : "4600 N Virginia Rd.",
+    "City" : "Beaver",
+    "StateID" : 44,
+    "State" : "Utah",
+    "HomePhone" : "(562) 555-8272",
+    "Skype" : "sandrajDXskype"
+}, {
+    "ID" : 7,
+    "FirstName" : "Kevin",
+    "LastName" : "Carter",
+    "Phone" : "(213) 555-2840",
+    "Prefix" : "Mr.",
+    "Position" : "Shipping Manager",
+    "BirthDate" : "1978-01-09",
+    "HireDate" : "2009-08-11",
+    "Email" : "kevinc@dx-email.com",
+    "Address" : "424 N Main St.",
+    "City" : "San Diego",
+    "StateID" : 5,
+    "State" : "California",
+    "HomePhone" : "(213) 555-8038",
+    "Skype" : "kevincDXskype"
+}, {
+    "ID" : 8,
+    "FirstName" : "Cynthia",
+    "LastName" : "Stanwick",
+    "Phone" : "(818) 555-6655",
+    "Prefix" : "Ms.",
+    "Position" : "HR Assistant",
+    "BirthDate" : "1985-06-05",
+    "HireDate" : "2008-03-24",
+    "Email" : "cindys@dx-email.com",
+    "Address" : "2211 Bonita Dr.",
+    "City" : "Little Rock",
+    "StateID" : 4,
+    "State" : "Arkansas",
+    "HomePhone" : "(818) 555-6808",
+    "Skype" : "cindysDXskype"
+}, {
+    "ID" : 9,
+    "FirstName" : "Kent",
+    "LastName" : "Samuelson",
+    "Phone" : "(562) 555-9282",
+    "Prefix" : "Dr.",
+    "Position" : "Ombudsman",
+    "BirthDate" : "1972-09-11",
+    "HireDate" : "2009-04-22",
+    "Email" : "kents@dx-email.com",
+    "Address" : "12100 Mora Dr",
+    "City" : "St. Louis",
+    "StateID" : 26,
+    "State" : "Missouri",
+    "HomePhone" : "(562) 555-1328",
+    "Skype" : "kentsDXskype"
+}, {
+    "ID" : 10,
+    "FirstName" : "Taylor",
+    "LastName" : "Riley",
+    "Phone" : "(310) 555-7276",
+    "Prefix" : "Mr.",
+    "Position" : "Network Admin",
+    "BirthDate" : "1982-08-14",
+    "HireDate" : "2012-04-14",
+    "Email" : "taylorr@dx-email.com",
+    "Address" : "7776 Torreyson Dr",
+    "City" : "San Jose",
+    "StateID" : 5,
+    "State" : "California",
+    "HomePhone" : "(310) 555-9712",
+    "Skype" : "taylorrDXskype"
+}];
+
+    </script>
+  
+  <script>
+  function sortTable(n) {
+    var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+    table = document.getElementById("myTable");
+    switching = true;
+    //Set the sorting direction to ascending:
+    dir = "asc"; 
+    /*Make a loop that will continue until
+    no switching has been done:*/
+    while (switching) {
+      //start by saying: no switching is done:
+      switching = false;
+      rows = table.rows;
+      /*Loop through all table rows (except the
+      first, which contains table headers):*/
+      for (i = 1; i < (rows.length - 1); i++) {
+        //start by saying there should be no switching:
+        shouldSwitch = false;
+        /*Get the two elements you want to compare,
+        one from current row and one from the next:*/
+        x = rows[i].getElementsByTagName("TD")[n];
+        y = rows[i + 1].getElementsByTagName("TD")[n];
+        /*check if the two rows should switch place,
+        based on the direction, asc or desc:*/
+        if (dir == "asc") {
+          if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+            //if so, mark as a switch and break the loop:
+            shouldSwitch= true;
+            break;
+          }
+        } else if (dir == "desc") {
+          if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+            //if so, mark as a switch and break the loop:
+            shouldSwitch = true;
+            break;
+          }
+        }
+      }
+      if (shouldSwitch) {
+        /*If a switch has been marked, make the switch
+        and mark that a switch has been done:*/
+        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+        switching = true;
+        //Each time a switch is done, increase this count by 1:
+        switchcount ++;      
+      } else {
+        /*If no switching has been done AND the direction is "asc",
+        set the direction to "desc" and run the while loop again.*/
+        if (switchcount == 0 && dir == "asc") {
+          dir = "desc";
+          switching = true;
+        }
+      }
+    }
+  }
+  </script>
+     <style>
+ @media screen and (min-width: 100px) and (max-width:  599px){
+.btnposition{
+    text-align: left!important;
+
+}
+.btnsize{
+    width:60px;
+    height: 23px;
+    color: aliceblue;
+    margin: 10px;
+    border-radius: 8px;
+    background-color:#1F3BB3;
+    border: none;
+    font-size: 10px;
+}
+ }
+ @media screen and (min-width: 600px) and (max-width: 992px){
+.btnposition{
+    text-align: right!important;
+
+}
+.btnsize{
+    width:80px;
+    height: 25px;
+    color: aliceblue;
+    margin: 10px;
+    border-radius: 10px;
+    background-color:#1F3BB3;
+    border: none;
+    font-size: 15px;
+}
+ }
+ @media screen and (min-width: 993px){
+.btnposition{
+      text-align: right!important;
+
+}
+.btnsize{
+    width:100px;
+    height: 28px;
+    color: aliceblue;
+    margin: 10px;
+    border-radius: 15px;
+    background-color:#1F3BB3;
+    border: none;
+    font-size: 15px;
+}
+ }
+
+        </style>
+
+ <style>
+      @media screen and (min-width: 100px) and (max-width: 599px) {
+        .move {
+          margin-bottom: 5px !important;
+          height: 50px !important;
+        }
+
+        .lessmargin {
+          margin-bottom: 5px !important;
+
+        }
+
+        .smallfont {
+          width: 75px;
+          font-size: 8px !important;
+          margin-left: 0px !important;
+        }
+
+        .smallfont2 {
+          width: 75px;
+          font-size: 7px !important;
+          margin-left: 0px !important;
+        }
+      }
+
+
+
+      @media screen and (min-width: 600px) and (max-width: 992px) {
+
+
+        .smallfont {
+          width: 150px;
+        }
+      }
+
+      @media screen and (min-width: 993px) {
+        .smallfont {
+          width: 150px;
+        }
+
+      }
+
+      .btn-primary {
+        background-color: #1F3BB3 !important;
+        border-color: #1F3BB3 !important;
+      }
+
+      .dropdown-toggle {
+        background-color: #1F3BB3 !important;
+        border-color: #1F3BB3 !important;
+      }
+
+
+
+      @media screen and (max-width: 1235px) {
+
+        .fixdatebox {
+          display: grid !important;
+        }
+
+        .fixbtn {
+          margin-top: 5px;
+        }
+
+        .fixfont {}
+
+        .fixsearch {
+          margin-bottom: 80px;
+        }
+      }
+    </style>
+ 
+    <!--เพิ่มมมม-->            
+
+
+<%# <div class="row ">
+  <div class="form-group col-auto  lessmargin">
+    <div class="dropdown">
+      <button style="color: aliceblue; background-color: #1F3BB3 !important;" class="smallfont btn btn-primary btn-sm dropdown-toggle" type="button"
+              id="dropdownMenuSizeButton3" data-bs-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+        Sort by
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton3">
+        <a class="dropdown-item" href="#Sale">Sale</a>
+        <a class="dropdown-item" href="#Project">Project</a>
+        <a class="dropdown-item" href="#AllPrice">งบประมาณ</a>
+        <a class="dropdown-item" href="#Price">งบที่เสนอ</a>
+        <a class="dropdown-item" href="#Biffing">Bidding</a>
+        <a class="dropdown-item" href="#Product">Product</a>
+        <a class="dropdown-item" href="#LG">%LG</a>
+        <a class="dropdown-item" href="#GP">%GP</a>
+        <a class="dropdown-item" href="#WIN">%WIN</a>
+        <a class="dropdown-item" href="#Status">Last Note</a>
+        <a class="dropdown-item" href="#Update">Last Update</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group col-auto  lessmargin move">
+    <div class="dropdown">
+      <button style="color: aliceblue;  background-color: #1F3BB3 !important;" class="smallfont btn btn-primary btn-sm dropdown-toggle" type="button"
+              id="dropdownMenuSizeButton3" data-bs-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+        Sort by
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton3">
+        <a class="dropdown-item" href="#Sale">Sale</a>
+        <a class="dropdown-item" href="#Project">Project</a>
+        <a class="dropdown-item" href="#AllPrice">งบประมาณ</a>
+        <a class="dropdown-item" href="#Price">งบที่เสนอ</a>
+        <a class="dropdown-item" href="#Biffing">Bidding</a>
+        <a class="dropdown-item" href="#Product">Product</a>
+        <a class="dropdown-item" href="#LG">%LG</a>
+        <a class="dropdown-item" href="#GP">%GP</a>
+        <a class="dropdown-item" href="#WIN">%WIN</a>
+        <a class="dropdown-item" href="#Status">Status</a>
+        <a class="dropdown-item" href="#Update">Last Update</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group col-auto mr-auto lessmargin move">
+    <div class="dropdown">
+      <button style="color: aliceblue;   background-color: #1F3BB3 !important;" class="smallfont btn btn-primary btn-sm dropdown-toggle" type="button"
+              id="dropdownMenuSizeButton3" data-bs-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+        Sort WIN
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton3">
+        <a class="dropdown-item" href="?win_e=0">0%</a>
+        <a class="dropdown-item" href="?win_s=1&win_e=25">1-25%</a>
+        <a class="dropdown-item" href="?win_s=26&win_e=50">26-50%</a>
+        <a class="dropdown-item" href="?win_s=51&win_e=75">51-75%</a>
+        <a class="dropdown-item" href="?win_s=76&win_e=99">76-99%</a>
+        <a class="dropdown-item" href="?win_s=100">100%</a>
+      </div>
+    </div>
+  </div>
+ 
+</div> %>
+<%# <div class="row">
+  <div class="form-group col-auto mr-auto lessmargin">
+    <form action="">
+      <div class="row">
+        <div class="col-container" style="width:200px">
+          <label for="start_date">Start Date</label>
+          <input style="border-radius: 10px; width: 10rem; " type="date" id="start_date" name="start_date">
+        </div>
+        <div class="col-container" style="width:200px">
+          <label for="end_date">End Date</label>
+          <input style="border-radius: 10px; width: 10rem; " type="date" id="end_date" name="end_date">
+        </div>
+        <div class="col" style="  margin-top:23px;">
+          <input style=" background-color:#1F3BB3; color: aliceblue;  border-radius: 14px;" class="test btn btn-primary" type="submit">
+        </div>
+        <div class="col-6"></div>
+      </div>
+    </form>
+  </div>
+</div> %>
+ 
+ 
+                  <%# <div>
+                    <div class="  input-group form-group col-auto mr-auto " style="    margin-bottom: 5px; padding-left: 0px;">
+
+                      <form action=" ">
+                        <div style="margin-left: 0px ; padding-left: 0px; " class="row fixdatebox">
+
+                          <label for="start_date">Start Date</label>
+                          <div class="col-container" style="width:200px ; padding-left: 0px;">
+                          <input class="form-control" style="border-radius: 7px;" type="date" id="start_date" name="start_date">
+                          </div>
+
+                          <label for="end_date">End Date</label>
+                          <div class="col-container" style="width:200px ; padding-left: 0px;">
+                          <input class="form-control" style="border-radius: 7px;" type="date" id="end_date" name="end_date">
+                          </div>
+                          <div class="col" style=" padding-left: 0px;">
+                            <input class="btn btn-sm btn-primary fixbtn  text-white" style="border-radius: 8px; "
+                              class=" btn-primary " type="submit">
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div> %>
+<!-- partial -->
+<div class="home-tab">
+  <div class="d-sm-flex align-items-center justify-content-between ">
+    <div class="form-group col-auto mr-auto lessmargin">
+      <form action="">
+        <div class="row">
+          <div class="col-container" style="width:200px">
+            <label for="start_date">Start Date</label>
+            <input style="border-radius: 10px; width: 10rem; " type="date" id="start_date" name="start_date">
+          </div>
+          <div class="col-container" style="width:200px">
+            <label for="end_date">End Date</label>
+            <input style="border-radius: 10px; width: 10rem; " type="date" id="end_date" name="end_date">
+          </div>
+          <div class="col" style="  margin-top:23px;">
+            <input style=" background-color:#1F3BB3; color: aliceblue;  border-radius: 14px;"
+              class="test btn btn-primary" type="submit">
+          </div>
+
+        </div>
+      </form>
+    </div>
+
+    <div>
+      <%= form_tag projects_path, method: :get, class: "form-group lessmargin" do %>
+        <div class="input-group" style=" margin-top: 28px;">
+          <%= text_field_tag 'search' , @search, placeholder: 'Recipient\' s username', class: 'form-control' %>
+            <button class="btn btn-sm btn-primary" type="submit"
+              style="background-color:#1F3BB3; color: aliceblue; margin-top: 0px;">Search</button>
+        </div>
+        <% end %>
+    </div>
+  </div>
+  <div class="d-sm-flex align-items-center justify-content-between  ">
+    <div>
+      <div class="btn-wrapper " style="padding-left: 15px;">
+ 
+        <div class="btn-group">
+          <button type="button" style="background-color:#1F3BB3 !important;"
+            class="btn btn-primary text-white me-0 dropdown-toggle" data-bs-toggle="dropdown">Sort by</button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton3">
+            <a class="dropdown-item" >Sale</a>
+            <a class="dropdown-item" >Project</a>
+            <a class="dropdown-item" >งบประมาณ</a>
+            <a class="dropdown-item" >งบที่เสนอ</a>
+            <a class="dropdown-item" >Bidding</a>
+            <a class="dropdown-item" >Product</a>
+            <a class="dropdown-item" >%LG</a>
+            <a class="dropdown-item" >%GP</a>
+            <a class="dropdown-item" >%WIN</a>
+            <a class="dropdown-item" >Status</a>
+            <a class="dropdown-item" >Last Update</a>
+            <%# <a class="dropdown-item" href="#Sale">Sale</a>
+            <a class="dropdown-item" href="#Project">Project</a>
+            <a class="dropdown-item" href="#AllPrice">งบประมาณ</a>
+            <a class="dropdown-item" href="#Price">งบที่เสนอ</a>
+            <a class="dropdown-item" href="#Biffing">Bidding</a>
+            <a class="dropdown-item" href="#Product">Product</a>
+            <a class="dropdown-item" href="#LG">%LG</a>
+            <a class="dropdown-item" href="#GP">%GP</a>
+            <a class="dropdown-item" href="#WIN">%WIN</a>
+            <a class="dropdown-item" href="#Status">Status</a>
+            <a class="dropdown-item" href="#Update">Last Update</a> %>
+          </div>
+        </div>
+        <div class="btn-group">
+          <button type="button" style="background-color:#1F3BB3 !important;"
+            class="btn btn-primary text-white me-0 dropdown-toggle" data-bs-toggle="dropdown">Sort by</button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton3">
+            <a class="dropdown-item" >Sale</a>
+            <a class="dropdown-item" >Project</a>
+            <a class="dropdown-item" >งบประมาณ</a>
+            <a class="dropdown-item" >งบที่เสนอ</a>
+            <a class="dropdown-item" >Bidding</a>
+            <a class="dropdown-item" >Product</a>
+            <a class="dropdown-item" >%LG</a>
+            <a class="dropdown-item" >%GP</a>
+            <a class="dropdown-item" >%WIN</a>
+            <a class="dropdown-item" >Status</a>
+            <a class="dropdown-item" >Last Update</a>
+            <%# <a class="dropdown-item" href="#Sale">Sale</a>
+            <a class="dropdown-item" href="#Project">Project</a>
+            <a class="dropdown-item" href="#AllPrice">งบประมาณ</a>
+            <a class="dropdown-item" href="#Price">งบที่เสนอ</a>
+            <a class="dropdown-item" href="#Biffing">Bidding</a>
+            <a class="dropdown-item" href="#Product">Product</a>
+            <a class="dropdown-item" href="#LG">%LG</a>
+            <a class="dropdown-item" href="#GP">%GP</a>
+            <a class="dropdown-item" href="#WIN">%WIN</a>
+            <a class="dropdown-item" href="#Status">Status</a>
+            <a class="dropdown-item" href="#Update">Last Update</a> %>
+          </div>
+        </div>
+        <div class="btn-group">
+          <button type="button" style="background-color:#1F3BB3 !important; "
+            class="btn btn-primary text-white me-0 dropdown-toggle" data-bs-toggle="dropdown">Filter WIN</button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton3">
+            <a class="dropdown-item" >0%</a>
+            <a class="dropdown-item" >1-25%</a>
+            <a class="dropdown-item" >26-50%</a>
+            <a class="dropdown-item" >51-75%</a>
+            <a class="dropdown-item" >76-99%</a>
+            <a class="dropdown-item" >100%</a>
+            <%# <a class="dropdown-item" href="?win_e=0">0%</a>
+            <a class="dropdown-item" href="?win_s=1&win_e=25">1-25%</a>
+            <a class="dropdown-item" href="?win_s=26&win_e=50">26-50%</a>
+            <a class="dropdown-item" href="?win_s=51&win_e=75">51-75%</a>
+            <a class="dropdown-item" href="?win_s=76&win_e=99">76-99%</a>
+            <a class="dropdown-item" href="?win_s=100">100%</a> %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="btn-wrapper">
+        <a href="<%= new_project_path %>" class="btn btn-primary text-white me-0"><i class="icon-printer"></i> Add
+          project</a>
+        <a href="<%= projects_path(format: :csv) %>" class="btn btn-primary text-white me-0"><i
+            class="icon-download"></i> Download</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="row">
+  <div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Project Table กดที่หัวเพื่อจัดเรียงข้อมูล</h4>
+
+        <div class="table-responsive">
+          <table class="table" id="myTable">
+            <thead>
+            <tr>
+              <th onclick="sortTable(0)">Sale</th>
+              <th onclick="sortTable(1)">Project</th>
+              <th onclick="sortTable(2)">งบประมาณ</th>
+              <th onclick="sortTable(3)">ที่เสนอ</th>
+              <th onclick="sortTable(4)">Bidding</th>
+              <th onclick="sortTable(5)">Product</th>
+              <th onclick="sortTable(6)">%LG</th>
+              <th onclick="sortTable(7)">%GP</th>
+              <th onclick="sortTable(8)">%WIN</th>
+              <th onclick="sortTable(9)">Status</th>
+              <th onclick="sortTable(10)">Competitor</th>
+              <th onclick="sortTable(11)">Last Update</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% @projects.each do |project| %>
+ 
+              <tr>
+                <td><%= project.user_ids.first ? "#{User.find(project.user_ids.first).full_name}" : "ยังไม่ได้กำหนด" %></td>
+                <td>
+                  <ul style="list-style-type:none;">
+                    <li><%= project.name %></li>
+                    <li><%= project.customer_ids.first ? "#{Customer.find(project.customer_ids.first).name}" : "ยังไม่ได้กำหนด" %></li>
+                  </ul>
+                </td>
+                <td><%= project.budget %></td>
+                <td><%= project.expected_offer %></td>
+                <td><%= project.bidding_date.strftime("%d %b %Y") %></td>
+                <td>
+                  <ul style="list-style-type:none;">
+                    <li><%= project.product1 %></li>
+                    <li><%= project.product2 %></li>
+                    <li><%= project.product3 %></li>
+                  </ul>
+                </td>
+                <td><%= project.lg %>%</td>
+                <td><%= project.gp_rate %>%</td>
+                <td><%= project.win_rate %>%</td>
+                <td><%= simple_format(project.last_note ? project.last_note.note : project.status) %></td>
+                <td><%= simple_format(project.competitor) %></td>
+                <td>
+                  <ul style="list-style-type:none;">
+                    <li><%= project.updated_at.localtime.strftime("%m/%d/%Y") %></li>
+                    <li>
+                      <a href="<%= project_path(project) %>">
+                        <button style="color: aliceblue; width: 80%;" type="button"
+                                class="btn btn-primary btn-sm">View
+                        </button>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="<%= edit_project_path(project) %>">
+                        <button style="color: aliceblue; width: 80%;" type="button"
+                                class="btn btn-primary btn-sm">Update
+                        </button>
+                      </a>
+                    </li>
+                    <% if current_user.manager? %>
+                      <li>
+                        <a href="<%= project_path(project) %>" data-confirm="Are you sure?" rel="nofollow" data-method="delete">
+                          <button style="color: aliceblue; width: 80%;" type="button"
+                                  class="btn btn-danger btn-sm">Delete
+                          </button>
+                        </a>
+                      </li>
+                    <% end %>
+                  </ul>
+                </td>
+              </tr>
+            <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+                                <div class="col-lg-12 grid-margin stretch-card">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Product Table 2</h4>
+                                            <p>รวมรายการสินค้าที่มีในระบบ</p>
+                                            <div class="table-responsive">
+                                                <div class="col-lg-12 grid-margin stretch-card">
+                                                    <div class="demo-container">
+                                                        <div id="gridContainer"></div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+    <style>
+    .options {
+        padding: 20px;
+        margin-top: 40px;
+        background-color: rgba(48, 50, 72, 0.955);
+    }
+    
+    .caption {
+        font-size: 18px;
+        font-weight: 500;
+    }
+    
+    .option {
+        margin-top: 10px;
+    }
+    </style>
